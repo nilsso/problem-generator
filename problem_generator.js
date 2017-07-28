@@ -20,6 +20,7 @@ function generateProblem(str) {
 }
 
 // -----------------------------------------------------------------------------
+// Content
 
 // Elements
 var problem = $("#problem");
