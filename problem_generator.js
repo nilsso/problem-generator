@@ -39,7 +39,9 @@ $(function() {
     );
   });
 
-  generator_menu.val($.jStorage.get("generator") || "");
+  if ($.jStorage.get("generator")) {
+    generator_menu.val($.jStorage.get("generator"));
+  }
 
   // Generator string
   var generator = $.jStorage.get("generator") || generator_menu.val();
