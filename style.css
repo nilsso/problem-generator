@@ -50,6 +50,3 @@ a:hover {
   text-align: center;
   transition: color .25s ease-in-out;
 }
-#problem:hover {
-  color: #60759f;
-}
