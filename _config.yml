@@ -1,0 +1,12 @@
+title: nilso
+author: Nils Olsson
+email: nilso@enosis.net
+baseurl: ""
+url: ""
+markdown: kramdown
+gems:
+exclude:
+  - .git
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
