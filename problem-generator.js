@@ -130,9 +130,8 @@ function generateProblem(str) {
 // Render a new problem
 function renderNewProblem() {
   problem.fadeOut(300, function() {
-    console.debug(
-      generator_menu.val(),
-      generators[generator_menu.val()])
+    console.debug(generator_menu.val())
+    console.debug(generators[generator_menu.val()])
     problem.html(generateProblem(generators[generator_menu.val()]));
     MathJax.Hub.Queue(["Typeset", MathJax.Hub], function() {
       problem.fadeIn(300);
