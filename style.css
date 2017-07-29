@@ -8,12 +8,12 @@ body {
   padding-top: 50px;
 }
 a {
-  text-decoration: none;
+  text-decoration: underline;
   color: inherit;
   transition: color .25s ease-in-out;
 }
 a:hover {
-  text-decoration: inherit;
+  text-decoration: underline;
   color: #77f;
 }
 #footer {
