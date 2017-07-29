@@ -16,6 +16,13 @@ a:hover {
   text-decoration: underline;
   color: #77f;
 }
+.unselectable {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 #footer {
   position: absolute;
   bottom: 0;
