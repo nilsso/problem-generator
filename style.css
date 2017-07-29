@@ -16,13 +16,6 @@ a:hover {
   text-decoration: underline;
   color: #267CB9;
 }
-.unselectable {
-  -moz-user-select: -moz-none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
 #footer {
   position: absolute;
   bottom: 0;
@@ -38,6 +31,12 @@ a:hover {
   transform: translate(-50%, -50%);
   text-align: center;
   transition: color .25s ease-in-out;
+
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 
   /* Desktop: */
   font-size: 3em;
