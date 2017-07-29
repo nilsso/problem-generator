@@ -16,12 +16,11 @@ generators = {
   \\[\\{%{a0},%{a1},%{a2},%{a3},%{a4},...\\}\\]%{a:geometric}`,
   "Geometric series": `
   \\[\\sum_{n=1}^\\infty %{a}(%{r})^n\\]`,
-  "Sequence: A": `Determine convergence/divergence
+  "Series: A": `Determine convergence/divergence
   \\[1+\\frac{1}{\\sqrt[3]{%{a0}}}+
     \\frac{1}{\\sqrt[3]{%{a1}}}+
     \\frac{1}{\\sqrt[3]{%{a2}}}+
-    \\frac{1}{\\sqrt[3]{%{a3}}}+...\\]%{a:powers}`,
-  "Societal problems: 1": `White men outside of prison?`
+    \\frac{1}{\\sqrt[3]{%{a3}}}+...\\]%{a:powers}`
 }
 
 // Populate generator menu
