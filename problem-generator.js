@@ -32,7 +32,9 @@ $.each(generators, function(key, value) {
 });
 
 // Set default generator and URL hash from default/hash/browser cookie
+console.debug("original hash: ", window.location.hash);
 var hash = window.location.hash.substring(1, window.location.hash.length).replace("%20"," ");
+console.debug("replace?: ", window.location.hash.replace("%20", " "));
 generator_menu.val(hash || $.jStorage.get("generator", generator_menu.val()));
 window.location.hash = hash || generator_menu.val();
 console.debug("hash: ", hash);
