@@ -35,6 +35,7 @@ $.each(generators, function(key, value) {
 var hash = window.location.hash.substring(1, window.location.hash.length).replace("%20"," ");
 generator_menu.val(hash || $.jStorage.get("generator", generator_menu.val()));
 window.location.hash = hash || generator_menu.val();
+console.debug("hash: ", hash);
 
 // The meat; the problem generator
 function generateProblem(str) {
