@@ -32,12 +32,9 @@ $.each(generators, function(key, value) {
 });
 
 // Set default generator and URL hash from default/hash/browser cookie
-console.debug("original hash: ", window.location.hash);
-var hash = window.location.hash.substring(1, window.location.hash.length).replace("%20"," ");
-console.debug("replace?: ", window.location.hash.replace("%20", " "));
+var hash = window.location.hash.substring(1, window.location.hash.length).replace(/%20/g," ");
 generator_menu.val(hash || $.jStorage.get("generator", generator_menu.val()));
 window.location.hash = hash || generator_menu.val();
-console.debug("hash: ", hash);
 
 // The meat; the problem generator
 function generateProblem(str) {
@@ -133,8 +130,6 @@ function generateProblem(str) {
 // Render a new problem
 function renderNewProblem() {
   problem.fadeOut(300, function() {
-    console.debug(generator_menu.val())
-    console.debug(generators[generator_menu.val()])
     problem.html(generateProblem(generators[generator_menu.val()]));
     MathJax.Hub.Queue(["Typeset", MathJax.Hub], function() {
       problem.fadeIn(300);
