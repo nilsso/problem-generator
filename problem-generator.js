@@ -10,14 +10,17 @@ var generator_menu = $("#generators");
 
 // Generator strings
 generators = {
-  "Arithmetic sequence": "\\[\\{%{a0},%{a1},%{a2},%{a3},%{a4},...\\}\\]%{a:arithmetic}",
-  "Geometric sequence": "\\[\\{%{a0},%{a1},%{a2},%{a3},%{a4},...\\}\\]%{a:geometric}",
-  "Geometric series": "\\[\\sum_{n=1}^\\infty %{a}(%{r})^n\\]",
-  "Sequence: A": "Determine convergence/divergence\\[1+\\frac{1}{\\sqrt[3]{%{a0}}}+\\frac{1}{\\sqrt[3]{%{a1}}}+\\frac{1}{\\sqrt[3]{%{a2}}}+\\frac{1}{\\sqrt[3]{%{a3}}}+...\\]%{a:powers}"
-
-
-
-
+  "Arithmetic sequence": `
+  \\[\\{%{a0},%{a1},%{a2},%{a3},%{a4},...\\}\\]%{a:arithmetic}`,
+  "Geometric sequence": `
+  \\[\\{%{a0},%{a1},%{a2},%{a3},%{a4},...\\}\\]%{a:geometric}`,
+  "Geometric series": `
+  \\[\\sum_{n=1}^\\infty %{a}(%{r})^n\\]`,
+  "Sequence: A": `Determine convergence/divergence
+  \\[1+\\frac{1}{\\sqrt[3]{%{a0}}}+
+    \\frac{1}{\\sqrt[3]{%{a1}}}+
+    \\frac{1}{\\sqrt[3]{%{a2}}}+
+    \\frac{1}{\\sqrt[3]{%{a3}}}+...\\]%{a:powers}`
 }
 
 // Populate generator menu
@@ -28,7 +31,8 @@ $.each(generators, function(key, value) {
 });
 
 // Set default generator (or from browser cookie)
-generator_menu.val($.jStorage.get("generator", generator_menu.val()));
+var hash = window.location.hash.substring(1, window.location.hash.length).replace("%20"," ");
+generator_menu.val(hash || $.jStorage.get("generator", generator_menu.val()));
 
 // The meat; the problem generator
 function generateProblem(str) {
@@ -139,6 +143,7 @@ $(function() {
 // On generator menu selectionchange
 $("#generators").change(function(event) {
   $.jStorage.set("generator", generator_menu.val());
+  window.location.hash = generator_menu.val();
   renderNewProblem();
 });
 
