@@ -20,7 +20,8 @@ generators = {
   \\[1+\\frac{1}{\\sqrt[3]{%{a0}}}+
     \\frac{1}{\\sqrt[3]{%{a1}}}+
     \\frac{1}{\\sqrt[3]{%{a2}}}+
-    \\frac{1}{\\sqrt[3]{%{a3}}}+...\\]%{a:powers}`
+    \\frac{1}{\\sqrt[3]{%{a3}}}+...\\]%{a:powers}`,
+  "Societal problems: 1": `White men outside of prison?`
 }
 
 // Populate generator menu
