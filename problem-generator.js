@@ -12,7 +12,12 @@ var generator_menu = $("#generators");
 generators = {
   "Arithmetic sequence": "\\[\\{%{a0},%{a1},%{a2},%{a3},%{a4},...\\}\\]%{a:arithmetic}",
   "Geometric sequence": "\\[\\{%{a0},%{a1},%{a2},%{a3},%{a4},...\\}\\]%{a:geometric}",
-  "Geometric series": "\\[\\sum_{n=1}^\\infty %{a}(%{r})^n\\]"
+  "Geometric series": "\\[\\sum_{n=1}^\\infty %{a}(%{r})^n\\]",
+  "Sequence: A": "Determine convergence/divergence\\[1+\\frac{1}{\\sqrt[3]{%{a0}}}+\\frac{1}{\\sqrt[3]{%{a1}}}+\\frac{1}{\\sqrt[3]{%{a2}}}+\\frac{1}{\\sqrt[3]{%{a3}}}+...\\]%{a:powers}"
+
+
+
+
 }
 
 // Populate generator menu
@@ -86,6 +91,12 @@ function generateProblem(str) {
           var r = randomInt(1, 10);
           for (i = 0; i < symbols[s].length; ++i) {
             symbols[s][i] = a*Math.pow(r,i);
+          }
+          break;
+        case "powers":
+          var a = randomInt(1,5);
+          for (i = 0; i < symbols[s].length; ++i) {
+            symbols[s][i] = Math.pow(i+2,a);
           }
           break;
         default:
