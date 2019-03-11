@@ -2,7 +2,7 @@
 
 An experiment in math problem generation and web development
 
-[sweedjesus.github.io/problem-generator](https://sweedjesus.github.io/problem-generator)
+[nilsso.github.io/problem-generator](https://nilsso.github.io/problem-generator)
 
 ## (Notes to self)
 
